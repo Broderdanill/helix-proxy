@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Fetch and Send to Helix</title>
+  <script>
+    async function fetchAndSend() {
+      try {
+        const response = await fetch('http://pingvin:8081/api/arsys/v1/entry/User', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          credentials: 'include'
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error: ${response.status} ${response.statusText}`);
+        }
+
+        const data = await response.json();
+        const payload = JSON.stringify(data);
+
+        // 🟢 Skicka AREvent till formuläret via DView
+        if (parent?.DView?.SendSignalToParent) {
+          parent.DView.SendSignalToParent(undefined, 'UserDataReceived', payload);
+        }
+
+      } catch (error) {
+        const msg = `Fel vid fetch: ${error.message}`;
+        if (parent?.DView?.SendSignalToParent) {
+          parent.DView.SendSignalToParent(undefined, 'UserDataError', msg);
+        }
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', fetchAndSend);
+  </script>
+</head>
+<body>
+  <p>🔄 Hämtar användardata från Helix...</p>
+</body>
+</html>
