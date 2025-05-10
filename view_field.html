@@ -1,45 +1,50 @@
 <body data-url="$1225050902$">
-    <p>🔄 Hämtar från URL satt i attribut...</p>
+    <p>🔄 Fetching from URL set in attribute...</p>
     <script>
-        async function fetchFromDynamicAttribute() {
+      async function fetchFromDynamicAttribute() {
         const url = document.body.getAttribute('data-url');
         if (!url || url.includes('$')) {
-            sendError('Ingen giltig URL hittades i attributet.');
-            return;
+          sendError('No valid URL found in the attribute.');
+          return;
         }
-
-        console.log('🔗 Startar fetch:', url);
-
+  
+        console.log('🔗 Starting fetch:', url);
+  
         try {
-            const response = await fetch(url, {
+          const response = await fetch(url, {
             method: 'GET',
             headers: {
-                'Content-Type': 'application/json'
+              'Content-Type': 'application/json'
             },
             credentials: 'include'
-            });
-
-            console.log('📥 Fetch klart, status:', response.status);
-
-            if (!response.ok) {
+          });
+  
+          console.log('📥 Fetch complete, status:', response.status);
+  
+          if (!response.ok) {
             throw new Error(`HTTP error: ${response.status}`);
-            }
-
-            const data = await response.json();
-            console.log('📦 Data mottagen:', data);
-
-            const payload = JSON.stringify(data);
-
-            if (parent?.DView?.SendSignalToParent) {
-            console.log('📤 Skickar AREvent FetchResult till formulär');
+          }
+  
+          const data = await response.json();
+          console.log('📦 Data received:', data);
+  
+          const payload = JSON.stringify(data);
+  
+          if (parent?.DView?.SendSignalToParent) {
+            console.log('📤 Sending AREvent FetchResult to the form');
             parent.DView.SendSignalToParent(undefined, 'FetchResult', payload);
-            }
-
+          }
+  
         } catch (err) {
-            sendError(err.message);
+          sendError(err.message);
         }
+      }
+  
+      function sendError(message) {
+        if (parent?.DView?.SendSignalToParent) {
+          parent.DView.SendSignalToParent(undefined, 'FetchError', message);
         }
-
+      }
   
       window.addEventListener('DOMContentLoaded', fetchFromDynamicAttribute);
     </script>
