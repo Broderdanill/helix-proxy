@@ -6,6 +6,7 @@ Build the container and make sure that you can connect to the port you have set 
 Also replace the url:s with yours (example: http://pingvin:8080)
     "listen 8081" - Your new Proxy (This container)
     http://<URL>:8080 - Midtier
+    http://<URL>:8008 - Platform (AR Server)
 
 # 2. Deploy application
 Deploy the application to your Helix Innovation Suite environment using Developer Studio

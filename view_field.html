@@ -1,50 +1,79 @@
 <body data-url="$1225050902$">
     <p>🔄 Fetching from URL set in attribute...</p>
     <script>
-      async function fetchFromDynamicAttribute() {
+        async function fetchFromDynamicAttribute() {
         const url = document.body.getAttribute('data-url');
         if (!url || url.includes('$')) {
-          sendError('No valid URL found in the attribute.');
-          return;
+            sendError('No valid URL found in the attribute.');
+            return;
         }
-  
+
         console.log('🔗 Starting fetch:', url);
-  
+        await attemptFetch(url, false);
+        }
+
+        async function attemptFetch(url, hasRetried) {
         try {
-          const response = await fetch(url, {
+            const response = await fetch(url, {
             method: 'GET',
             headers: {
-              'Content-Type': 'application/json'
+                'Content-Type': 'application/json'
             },
             credentials: 'include'
-          });
-  
-          console.log('📥 Fetch complete, status:', response.status);
-  
-          if (!response.ok) {
+            });
+
+            console.log('📥 Fetch complete, status:', response.status);
+
+            if (response.status === 401 && !hasRetried) {
+            console.warn('🔐 Unauthorized – trying to establish session...');
+            const baseUrl = extractBaseUrl(url);
+
+            // Do login/session trigger call
+            const loginResponse = await fetch(baseUrl, {
+                method: 'GET',
+                credentials: 'include'
+            });
+
+            console.log('🔁 Session trigger response:', loginResponse.status);
+
+            // Try original request again
+            return await attemptFetch(url, true);
+            }
+
+            if (!response.ok) {
             throw new Error(`HTTP error: ${response.status}`);
-          }
-  
-          const data = await response.json();
-          console.log('📦 Data received:', data);
-  
-          const payload = JSON.stringify(data);
-  
-          if (parent?.DView?.SendSignalToParent) {
+            }
+
+            const data = await response.json();
+            console.log('📦 Data received:', data);
+
+            const payload = JSON.stringify(data);
+
+            if (parent?.DView?.SendSignalToParent) {
             console.log('📤 Sending AREvent FetchResult to the form');
             parent.DView.SendSignalToParent(undefined, 'FetchResult', payload);
-          }
-  
+            }
+
         } catch (err) {
-          sendError(err.message);
+            sendError(err.message);
         }
-      }
-  
-      function sendError(message) {
+        }
+
+        function extractBaseUrl(fullUrl) {
+        try {
+            const parsed = new URL(fullUrl);
+            return `${parsed.protocol}//${parsed.host}`;
+        } catch (e) {
+            console.error('❌ Failed to parse URL:', fullUrl);
+            return fullUrl;
+        }
+        }
+
+        function sendError(message) {
         if (parent?.DView?.SendSignalToParent) {
-          parent.DView.SendSignalToParent(undefined, 'FetchError', message);
+            parent.DView.SendSignalToParent(undefined, 'FetchError', message);
         }
-      }
+        }
   
       window.addEventListener('DOMContentLoaded', fetchFromDynamicAttribute);
     </script>

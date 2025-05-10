@@ -1,6 +1,6 @@
 char-set: UTF-8
 #
-#  File exported Sat May 10 08:26:26 UTC 2025
+#  File exported Sat May 10 08:45:29 UTC 2025
 #
 begin application
    name           : HELIX-PROXY
@@ -612,19 +612,27 @@ begin schema data
    data           : <?xml version="1.0" encoding="utf-8"?><entryList xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">    
    data           : <entryItem>        <f1_Request_ID__c>000000000000001</f1_Request_ID__c>        <f2_Submitter__c>dice</f2_Submitter__c>        <f3_Create_Date__c>2025-
    data           : 05-10T08:19:49+00:00</f3_Create_Date__c>        <f4_Assigned_To__c xsi:nil="true"/>        <f5_Last_Modified_By__c>dice</f5_Last_Modified_By__c>      
-   data           :   <f6_Modified_Date__c>2025-05-10T08:19:49+00:00</f6_Modified_Date__c>        <f7_Status__c>New</f7_Status__c>        <f8_Short_Description__c>x</f8_Sh
+   data           :   <f6_Modified_Date__c>2025-05-10T08:43:04+00:00</f6_Modified_Date__c>        <f7_Status__c>New</f7_Status__c>        <f8_Short_Description__c>x</f8_Sh
    data           : ort_Description__c>        <f15_Status_History>2025-05-10T08:19:49+00:00dice</f15_Status_History>        <f16_Notifier_Listening__c>Not Listening
    data           : </f16_Notifier_Listening__c>        <f37__Record_ID__c>AGGH00S1D6RMTASWB3TBSWB3TBBQER</f37__Record_ID__c>        <f536870_13_Script>&lt;body data-url="
-   data           : $1225050902$"&gt;    &lt;p&gt;&#55357;&#56580; Hämtar från URL satt i attribut...&lt;/p&gt;    &lt;script&gt;        async function fetchFromDynamic
-   data           : Attribute() {        const url = document.body.getAttribute('data-url');        if (!url || url.includes('$')) {            sendError('Ingen giltig UR
-   data           : L hittades i attributet.');            return;        }        console.log('&#55357;&#56599; Startar fetch:', url);        try {            const 
-   data           : response = await fetch(url, {            method: 'GET',            headers: {                'Content-Type': 'application/json'            },       
-   data           :      credentials: 'include'            });            console.log('&#55357;&#56549; Fetch klart, status:', response.status);            if (!respons
-   data           : e.ok) {            throw new Error(`HTTP error: ${response.status}`);            }            const data = await response.json();            console
-   data           : .log('&#55357;&#56550; Data mottagen:', data);            const payload = JSON.stringify(data);            if (parent?.DView?.SendSignalToParent) { 
-   data           :            console.log('&#55357;&#56548; Skickar AREvent FetchResult till formulär');            parent.DView.SendSignalToParent(undefined, 'FetchResul
-   data           : t', payload);            }        } catch (err) {            sendError(err.message);        }        }        window.addEventListener('DOMConten
-   data           : tLoaded', fetchFromDynamicAttribute);    &lt;/script&gt;  &lt;/body&gt;</f536870_13_Script>    </entryItem></entryList>
+   data           : $1225050902$"&gt;    &lt;p&gt;&#55357;&#56580; Fetching from URL set in attribute...&lt;/p&gt;    &lt;script&gt;        async function fetchFromDynami
+   data           : cAttribute() {        const url = document.body.getAttribute('data-url');        if (!url || url.includes('$')) {            sendError('No valid URL f
+   data           : ound in the attribute.');            return;        }        console.log('&#55357;&#56599; Starting fetch:', url);        await attemptFetch(url, fa
+   data           : lse);        }        async function attemptFetch(url, hasRetried) {        try {            const response = await fetch(url, {            method:
+   data           :  'GET',            headers: {                'Content-Type': 'application/json'            },            credentials: 'include'            });    
+   data           :         console.log('&#55357;&#56549; Fetch complete, status:', response.status);            if (response.status === 401 &amp;&amp; !hasRetried) {    
+   data           :         console.warn('&#55357;&#56592; Unauthorized – trying to establish session...');            const baseUrl = extractBaseUrl(url);            /
+   data           : / Do login/session trigger call            const loginResponse = await fetch(baseUrl, {                method: 'GET',                credentials: 'inc
+   data           : lude'            });            console.log('&#55357;&#56577; Session trigger response:', loginResponse.status);            // Try original request 
+   data           : again            return await attemptFetch(url, true);            }            if (!response.ok) {            throw new Error(`HTTP error: ${respons
+   data           : e.status}`);            }            const data = await response.json();            console.log('&#55357;&#56550; Data received:', data);          
+   data           :   const payload = JSON.stringify(data);            if (parent?.DView?.SendSignalToParent) {            console.log('&#55357;&#56548; Sending AREvent F
+   data           : etchResult to the form');            parent.DView.SendSignalToParent(undefined, 'FetchResult', payload);            }        } catch (err) {        
+   data           :     sendError(err.message);        }        }        function extractBaseUrl(fullUrl) {        try {            const parsed = new URL(fullUrl);  
+   data           :           return `${parsed.protocol}//${parsed.host}`;        } catch (e) {            console.error('❌ Failed to parse URL:', fullUrl);            
+   data           : return fullUrl;        }        }        function sendError(message) {        if (parent?.DView?.SendSignalToParent) {            parent.DView.Send
+   data           : SignalToParent(undefined, 'FetchError', message);        }        }        window.addEventListener('DOMContentLoaded', fetchFromDynamicAttribute);  
+   data           :   &lt;/script&gt;  &lt;/body&gt;</f536870_13_Script>    </entryItem></entryList>
 end
 
 end
