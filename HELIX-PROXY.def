@@ -1,0 +1,631 @@
+char-set: UTF-8
+#
+#  File exported Sat May 10 08:26:26 UTC 2025
+#
+begin application
+   name           : HELIX-PROXY
+begin container
+   name           : HELIX-PROXY
+   type           : 2
+   num-references : 14
+   timestamp      : 1746865552
+   owner          : dice
+   last-changed   : dice
+   export-version : 12
+   label          : HELIX-PROXY
+   description    : Demo application
+   object-prop    : 3\90015\2\4\90016\4\1\1\90002\4\11\HELIX-PROXY\
+reference {
+   type           : 32839
+   datatype       : 1
+   value          : 2\2\
+}
+reference {
+   type           : 32777
+   datatype       : 1
+   value          : 0\
+}
+reference {
+   type           : 2
+   datatype       : 0
+   object         : HELIX-PROXY:Demo
+}
+reference {
+   type           : 32778
+   datatype       : 1
+   value          : 4\2\pv\
+}
+reference {
+   type           : 32771
+   datatype       : 1
+   value          : 0\
+}
+reference {
+   type           : 2
+   datatype       : 0
+   object         : HELIX-PROXY:Script
+}
+reference {
+   type           : 32778
+   datatype       : 1
+   value          : 0\
+}
+reference {
+   type           : 32771
+   datatype       : 1
+   value          : 0\
+}
+reference {
+   type           : 2
+   datatype       : 0
+   object         : HELIX-PROXY:Demo
+}
+reference {
+   type           : 32778
+   datatype       : 1
+   value          : 0\
+}
+reference {
+   type           : 32833
+   datatype       : 1
+   value          : 4\16\4\1\2\2\1\2\2\1\\
+}
+reference {
+   type           : 32841
+   datatype       : 1
+   value          : 4\2\1;\
+}
+reference {
+   type           : 32842
+   datatype       : 1
+   value          : 2\128\
+}
+reference {
+   type           : 2
+   datatype       : 0
+   object         : HELIX-PROXY:Script
+}
+end
+begin schema
+   name           : HELIX-PROXY:Demo
+   core-version   : 2
+   upgrade-version: 0
+   num-fields     : 10
+   timestamp      : 1746865410
+   owner          : dice
+   last-changed   : dice
+   default-vui    : pv
+   num-vuis       : 1
+   export-version : 12
+   schema-type    : 4
+   next-field-id  : 1225050903
+   object-prop    : 4\0\0\90016\4\1\1\90015\2\4\90002\4\11\HELIX-PROXY\
+   assoc-to-follow-type : archive
+  assoc-to-follow : 
+   assoc-sel-type : 0
+     assoc-list   : 0\
+   schema-row-identifier : 092f7b8e8610551def621362b9e23d79
+vui  {
+   id             : 536870913
+   name           : pv
+   label          : pv
+   timestamp      : 1746797806
+   vui-locale     : 
+   vui-type       : 9
+   owner          : dice
+   last-changed   : dice
+   display-prop   : 3\20\4\2\pv\272\2\1\60019\4\24\NewViewWebAlias536870912\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
+}
+field {
+   id             : 536870914
+   name           : Container Panel Holder__c
+   datatype       : 36
+   fieldtype      : 0
+   create-mode    : 2
+   option         : 4
+   timestamp      : 1746797806
+   owner          : dice
+   last-changed   : dice
+ display-instance : 536870913\30\3\41\2\562\500\191788\84500\4\6\1\7\40\2147483648\14\40\1\20\4\15\Panel Holder__c\21\41\2\0\0\0\0\27\8\2\143\40\4294967295\170\40\0\272\2\1\&
+ display-instance : 273\6\4\274\2\1\275\2\0\276\2\0\277\2\0\278\2\0\292\2\0\294\2\0\304\40\1\307\6\1\310\6\0\5073\2\3\5216\40\0\5233\4\0\\5234\4\4\left\5297\6\4\5298\6\0\532&
+ display-instance : 8\6\0\5329\4\4\left\5381\6\0\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
+}
+field {
+   id             : 536870915
+   name           : Container Panel__c
+   datatype       : 35
+   fieldtype      : 0
+   create-mode    : 2
+   option         : 4
+   timestamp      : 1746797806
+   owner          : dice
+   last-changed   : dice
+ display-instance : 536870913\48\6\0\3\41\2\1124\1000\191225\84000\4\6\1\7\40\2147483649\11\4\8\0xC1BAAE\14\40\1\20\4\18\Container Panel__c\24\4\8\0xFFFFFF\27\8\2\143\40\0\1&
+ display-instance : 68\40\1\169\40\1\170\40\536870914\272\6\0\281\2\0\282\4\8\0xC98821\283\2\93925\284\2\2812\285\2\16872\286\6\1\292\2\0\294\2\0\296\4\8\0xFFFFFF\297\6\0\29&
+ display-instance : 8\4\3\1.0\305\4\8\0xFFFFFF\306\6\0\308\2\0\309\6\0\310\6\0\327\4\1\1\5073\2\3\5074\4\4\NONE\5076\4\4\NONE\5077\4\4\NONE\5216\40\0\5233\4\0\\5234\4\4\left&
+ display-instance : \5235\4\4\NONE\5244\4\4\NONE\5245\4\4\NONE\5246\6\1\5247\6\1\5248\6\1\5299\2\0\5311\6\0\5397\4\0\\5398\4\0\\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
+}
+field {
+   id             : 536870916
+   name           : Sub Panel Holder__c
+   datatype       : 36
+   fieldtype      : 0
+   create-mode    : 2
+   option         : 4
+   timestamp      : 1746797806
+   owner          : dice
+   last-changed   : dice
+ display-instance : 536870913\30\3\41\2\1124\1000\190100\83000\4\6\1\7\40\2147483650\14\40\1\20\4\15\Panel Holder__c\21\41\2\0\0\0\0\27\8\2\143\40\4294967295\170\40\53687091&
+ display-instance : 5\272\2\1\273\6\4\274\2\1\275\2\0\276\2\0\277\2\0\278\2\0\292\2\0\294\2\0\304\40\1\307\6\1\310\6\0\5073\2\4\5216\40\0\5233\4\0\\5234\4\4\left\5297\6\4\52&
+ display-instance : 98\6\0\5328\6\0\5329\4\4\left\5381\6\0\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
+}
+field {
+   id             : 536870917
+   name           : Sub Panel__c
+   datatype       : 35
+   fieldtype      : 0
+   create-mode    : 2
+   option         : 4
+   timestamp      : 1746797806
+   owner          : dice
+   last-changed   : dice
+ display-instance : 536870913\48\6\0\3\41\2\1687\1500\189538\82500\4\6\1\7\40\2147483651\11\4\8\0xC1BAAE\14\40\1\20\4\12\Sub Panel__c\24\4\8\0xFFFFFF\27\8\2\143\40\0\168\40\&
+ display-instance : 1\169\40\1\170\40\536870916\272\6\0\281\2\0\282\4\8\0xC98821\283\2\91676\284\2\2812\285\2\16872\286\6\1\292\2\0\294\2\0\296\4\8\0xFFFFFF\297\6\0\298\4\3\&
+ display-instance : 1.0\305\4\8\0xFFFFFF\306\6\0\308\2\0\309\6\0\310\6\0\327\4\1\1\5073\2\4\5074\4\4\NONE\5076\4\4\NONE\5077\4\4\NONE\5216\40\0\5233\4\0\\5234\4\4\left\5235\&
+ display-instance : 4\4\NONE\5244\4\4\NONE\5245\4\4\NONE\5246\6\1\5247\6\1\5248\6\1\5299\2\0\5311\6\0\5397\4\0\\5398\4\0\\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
+}
+field {
+   id             : 536870918
+   name           : Section Panel Holder__c
+   datatype       : 36
+   fieldtype      : 0
+   create-mode    : 2
+   option         : 4
+   timestamp      : 1746797806
+   owner          : dice
+   last-changed   : dice
+ display-instance : 536870913\30\3\41\2\1124\1000\187850\81000\4\6\1\7\40\2147483652\14\40\1\20\4\15\Panel Holder__c\21\41\2\0\0\0\0\27\8\2\143\40\4294967295\170\40\53687091&
+ display-instance : 7\272\2\1\273\6\4\274\2\1\275\2\0\276\2\0\277\2\0\278\2\0\292\2\0\294\2\0\304\40\1\307\6\1\310\6\0\5073\2\5\5216\40\0\5233\4\0\\5234\4\4\left\5297\6\4\52&
+ display-instance : 98\6\0\5328\6\0\5329\4\4\left\5381\6\0\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
+}
+field {
+   id             : 536870919
+   name           : Section Panel__c
+   datatype       : 35
+   fieldtype      : 0
+   create-mode    : 2
+   option         : 4
+   timestamp      : 1746797806
+   owner          : dice
+   last-changed   : dice
+ display-instance : 536870913\48\6\0\3\41\2\1687\1500\187288\80500\4\6\1\7\40\2147483653\11\4\8\0xC1BAAE\14\40\1\20\4\16\Section Panel__c\24\4\8\0xFFFFFF\27\8\2\143\40\0\168&
+ display-instance : \40\1\169\40\1\170\40\536870918\272\6\0\281\2\0\282\4\8\0xC98821\283\2\89426\284\2\2812\285\2\16872\286\6\1\292\2\0\294\2\0\296\4\8\0xFFFFFF\297\6\0\298\&
+ display-instance : 4\3\1.0\305\4\8\0xFFFFFF\306\6\0\308\2\0\309\6\0\310\6\0\327\4\1\1\5073\2\5\5074\4\4\NONE\5076\4\4\NONE\5077\4\4\NONE\5216\40\0\5233\4\0\\5234\4\4\left\5&
+ display-instance : 235\4\4\NONE\5244\4\4\NONE\5245\4\4\NONE\5246\6\1\5247\6\1\5248\6\1\5299\2\0\5311\6\0\5397\4\0\\5398\4\0\\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
+}
+field {
+   id             : 536870922
+   name           : Btn_JSFetch
+   datatype       : 32
+   fieldtype      : 0
+   create-mode    : 2
+   option         : 4
+   timestamp      : 1746864941
+   owner          : dice
+   last-changed   : dice
+ display-instance : 536870913\20\2\8\1\3\41\2\2587\11300\7986\13400\4\6\1\5\6\2\7\40\2147483658\21\41\2\0\0\0\0\27\8\2\110\4\8\JS Fetch\143\40\4294967295\170\40\536870919\31&
+ display-instance : 0\6\0\5231\4\0\\5232\4\0\\5233\4\0\\5234\4\4\left\5376\6\0\5382\6\0\5383\4\0\\5384\2\0\5397\4\0\\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
+}
+field {
+   id             : 536870923
+   name           : View Field__c
+   datatype       : 42
+   fieldtype      : 0
+   create-mode    : 2
+   option         : 4
+   timestamp      : 1746865409
+   owner          : dice
+   last-changed   : dice
+ display-instance : 536870913\17\3\41\2\2249\15400\35994\25400\4\6\1\7\40\2147483659\14\40\1\20\4\13\View Field__c\27\8\2\80\4\0\\143\40\4294967295\170\40\536870919\310\6\0\&
+ display-instance : 323\6\0\5024\6\1\5025\6\2\5233\4\0\\5234\4\4\left\5378\4\0\\5397\4\0\\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
+}
+field {
+   id             : 1225050901
+   name           : RestResult
+   datatype       : 4
+   fieldtype      : 1
+   create-mode    : 2
+   option         : 4
+   timestamp      : 1746865361
+   owner          : dice
+   last-changed   : dice
+   length-units   : 0
+   maxlength      : 0
+   clob-store-opt : 0
+   menu-style     : 2
+   qbe-match-op   : 1
+   fulltext-optns : 0
+ display-instance : 536870913\42\3\41\2\2249\6900\20021\9800\4\6\1\5\6\2\7\40\2147483656\14\40\1\20\4\10\RestResult\21\41\2\0\0\7874\1000\27\8\2\60\40\1\66\41\2\15748\1100\1&
+ display-instance : 7772\2900\143\40\4294967295\151\41\2\0\1100\15185\2900\170\40\536870919\231\6\0\288\6\0\289\4\4\0x00\290\4\4\0x00\310\6\0\5116\6\0\5233\4\0\\5234\4\4\lef&
+ display-instance : t\5296\4\0\\5302\6\0\5314\6\0\5315\2\3\5345\4\0\\5347\4\0\\5352\2\0\5353\4\0\\5354\2\0\5368\4\0\\5369\4\0\\5373\6\0\5375\6\0\5378\4\0\\5379\2\0\5380\4\0\&
+ display-instance : \5382\6\0\5383\4\0\\5384\2\0\5397\4\0\\5403\6\1\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
+}
+field {
+   id             : 1225050902
+   name           : URL
+   datatype       : 4
+   fieldtype      : 1
+   create-mode    : 2
+   option         : 4
+   timestamp      : 1746864941
+   owner          : dice
+   last-changed   : dice
+   length-units   : 0
+   maxlength      : 0
+   clob-store-opt : 0
+   menu-style     : 2
+   qbe-match-op   : 1
+   fulltext-optns : 0
+   default        : http://pingvin:8081/api/arsys/v1/entry/User
+ display-instance : 536870913\42\3\41\2\2249\2000\20021\4900\4\6\1\5\6\2\7\40\2147483657\14\40\1\20\4\3\URL\21\41\2\0\0\7874\1000\27\8\2\60\40\1\66\41\2\15748\1100\17772\290&
+ display-instance : 0\143\40\4294967295\151\41\2\0\1100\15185\2900\170\40\536870919\231\6\0\288\6\0\289\4\4\0x00\290\4\4\0x00\310\6\0\5116\6\0\5233\4\0\\5234\4\4\left\5296\4&
+ display-instance : \0\\5302\6\0\5314\6\0\5315\2\0\5345\4\0\\5347\4\0\\5352\2\0\5353\4\0\\5354\2\0\5368\4\0\\5369\4\0\\5373\6\0\5375\6\0\5378\4\0\\5379\2\0\5380\4\0\\5382\6\&
+ display-instance : 0\5383\4\0\\5384\2\0\5397\4\0\\5403\6\0\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
+}
+end
+begin schema
+   name           : HELIX-PROXY:Script
+   core-version   : 2
+   upgrade-version: 0
+   num-fields     : 12
+   timestamp      : 1746865083
+   owner          : dice
+   last-changed   : dice
+   default-vui    : Default Administrator View__c
+   num-vuis       : 1
+   export-version : 12
+   schema-type    : 1
+   next-field-id  : 536870914
+   index          : 1\379\1\0
+   object-prop    : 4\0\0\90015\2\4\90016\4\1\1\90002\4\11\HELIX-PROXY\
+   assoc-to-follow-type : archive
+  assoc-to-follow : 
+   assoc-sel-type : 0
+     assoc-list   : 0\
+   schema-row-identifier : d20d249fe228748befdbe57a10418387
+vui  {
+   id             : 536870912
+   name           : Default Administrator View__c
+   label          : Default Administrator View__c
+   timestamp      : 1746865083
+   vui-locale     : 
+   vui-type       : 1
+   owner          : dice
+   last-changed   : dice
+   display-prop   : 1\20\4\29\Default Administrator View__c\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
+}
+field {
+   id             : 1
+   name           : Request ID__c
+   datatype       : 4
+   fieldtype      : 1
+   create-mode    : 2
+   option         : 3
+   timestamp      : 1746865083
+   owner          : dice
+   last-changed   : dice
+   length-units   : 0
+   maxlength      : 15
+   clob-store-opt : 0
+   menu-style     : 2
+   qbe-match-op   : 1
+   fulltext-optns : 0
+   permission     : 0\1
+   permission     : 4\1
+   permission     : 3\1
+ display-instance : 536870912\14\3\41\2\4274\2500\24971\4300\4\6\1\7\40\2147483640\20\4\10\Request ID\21\41\2\0\400\4949\1800\27\8\16\28\6\4\29\6\1\60\40\1\65\41\2\0\0\0\0\1&
+ display-instance : 43\40\4294967295\151\41\2\5511\0\20696\1800\170\40\0\231\6\1\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
+}
+field {
+   id             : 2
+   name           : Submitter__c
+   datatype       : 4
+   fieldtype      : 1
+   create-mode    : 1
+   option         : 1
+   timestamp      : 1746865083
+   owner          : dice
+   last-changed   : dice
+   length-units   : 0
+   maxlength      : 254
+   clob-store-opt : 0
+   menu-style     : 2
+   qbe-match-op   : 1
+   fulltext-optns : 0
+   default        : $-1$
+   permission     : 4\1
+   permission     : 3\1
+ display-instance : 536870912\16\3\41\2\4499\5000\27558\6800\4\6\1\7\40\2147483641\20\4\9\Submitter\21\41\2\0\400\4724\1800\27\8\16\28\6\4\29\6\1\60\40\1\61\40\30\65\41\2\0\&
+ display-instance : 0\0\0\66\41\2\21034\0\23058\1800\143\40\4294967295\151\41\2\5286\0\20471\1800\170\40\0\231\6\0\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
+}
+field {
+   id             : 3
+   name           : Create Date__c
+   datatype       : 7
+   fieldtype      : 1
+   create-mode    : 2
+   option         : 3
+   timestamp      : 1746865083
+   owner          : dice
+   last-changed   : dice
+   permission     : 4\1
+   permission     : 3\1
+ display-instance : 536870912\16\3\41\2\3937\7500\27559\9300\4\6\1\7\40\2147483642\20\4\11\Create Date\21\41\2\0\400\5286\1800\27\8\16\28\6\4\29\6\1\60\40\1\61\40\23\65\41\2&
+ display-instance : \0\0\0\0\66\41\2\21597\0\23621\1800\143\40\4294967295\151\41\2\5849\0\21034\1800\170\40\0\231\6\0\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
+}
+field {
+   id             : 4
+   name           : Assigned To__c
+   datatype       : 4
+   fieldtype      : 1
+   create-mode    : 2
+   option         : 2
+   timestamp      : 1746865083
+   owner          : dice
+   last-changed   : dice
+   length-units   : 0
+   maxlength      : 254
+   clob-store-opt : 0
+   menu-style     : 2
+   qbe-match-op   : 1
+   fulltext-optns : 0
+   permission     : 4\1
+ display-instance : 536870912\16\3\41\2\3937\10000\27559\11800\4\6\1\7\40\2147483643\20\4\11\Assigned To\21\41\2\0\400\5286\1800\27\8\16\28\6\4\29\6\1\60\40\1\61\40\30\65\41&
+ display-instance : \2\0\0\0\0\66\41\2\21597\0\23621\1800\143\40\4294967295\151\41\2\5849\0\21034\1800\170\40\0\231\6\0\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
+}
+field {
+   id             : 5
+   name           : Last Modified By__c
+   datatype       : 4
+   fieldtype      : 1
+   create-mode    : 2
+   option         : 3
+   timestamp      : 1746865083
+   owner          : dice
+   last-changed   : dice
+   length-units   : 0
+   maxlength      : 254
+   clob-store-opt : 0
+   menu-style     : 2
+   qbe-match-op   : 1
+   fulltext-optns : 0
+   permission     : 4\1
+ display-instance : 536870912\16\3\41\2\2249\12500\27558\14300\4\6\1\7\40\2147483644\20\4\16\Last Modified By\21\41\2\0\400\6974\1800\27\8\16\28\6\4\29\6\1\60\40\1\61\40\33\&
+ display-instance : 65\41\2\0\0\0\0\66\41\2\23284\0\25308\1800\143\40\4294967295\151\41\2\7536\0\22721\1800\170\40\0\231\6\0\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
+}
+field {
+   id             : 6
+   name           : Modified Date__c
+   datatype       : 7
+   fieldtype      : 1
+   create-mode    : 2
+   option         : 3
+   timestamp      : 1746865083
+   owner          : dice
+   last-changed   : dice
+   permission     : 4\1
+ display-instance : 536870912\16\3\41\2\3262\15000\27558\16800\4\6\1\7\40\2147483645\20\4\13\Modified Date\21\41\2\0\400\5961\1800\27\8\16\28\6\4\29\6\1\60\40\1\61\40\23\65\&
+ display-instance : 41\2\0\0\0\0\66\41\2\22272\0\24296\1800\143\40\4294967295\151\41\2\6524\0\21709\1800\170\40\0\231\6\0\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
+}
+field {
+   id             : 7
+   name           : Status__c
+   datatype       : 6
+   fieldtype      : 1
+   create-mode    : 2
+   option         : 1
+   timestamp      : 1746865083
+   owner          : dice
+   last-changed   : dice
+   enum-value     : New
+   enum-value     : Assigned
+   enum-value     : Fixed
+   enum-value     : Rejected
+   enum-value     : Closed
+   default        : 0
+   permission     : 4\2
+   permission     : 3\1
+ display-instance : 536870912\17\3\41\2\5849\17500\34645\19000\4\6\1\7\40\2147483646\20\4\6\Status\21\41\2\0\400\3374\1500\27\8\16\28\6\4\29\6\1\60\40\1\61\40\0\64\6\1\65\41&
+ display-instance : \2\0\0\0\0\143\40\4294967295\151\41\2\3937\400\28796\1900\170\40\0\230\4\46\5\0\New\1\Assigned\2\Fixed\3\Rejected\4\Closed\231\6\0\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
+}
+field {
+   id             : 8
+   name           : Short Description__c
+   datatype       : 4
+   fieldtype      : 1
+   create-mode    : 1
+   option         : 1
+   timestamp      : 1746865083
+   owner          : dice
+   last-changed   : dice
+   length-units   : 0
+   maxlength      : 254
+   clob-store-opt : 0
+   menu-style     : 2
+   qbe-match-op   : 1
+   fulltext-optns : 0
+   default        : x
+   permission     : 4\1
+   permission     : 3\1
+ display-instance : 536870912\16\3\41\2\1012\20000\27558\21800\4\6\1\7\40\2147483647\20\4\17\Short Description\21\41\2\0\400\8211\1800\27\8\16\28\6\4\29\6\1\60\40\1\61\40\50&
+ display-instance : \65\41\2\0\0\0\0\66\41\2\24521\0\26545\1800\143\40\4294967295\151\41\2\8773\0\23958\1800\170\40\0\231\6\0\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
+}
+field {
+   id             : 15
+   name           : Status History
+   datatype       : 4
+   fieldtype      : 1
+   create-mode    : 2
+   option         : 3
+   timestamp      : 1746865082
+   owner          : dice
+   last-changed   : dice
+   permission     : 4\1
+   permission     : 3\1
+   object-prop    : 2\90016\4\1\1\90015\2\4\
+}
+field {
+   id             : 16
+   name           : Notifier Listening__c
+   datatype       : 6
+   fieldtype      : 1
+   create-mode    : 2
+   option         : 2
+   timestamp      : 1746865083
+   owner          : dice
+   last-changed   : dice
+   enum-value     : Not Listening
+   enum-value     : Listening
+   default        : 0
+   permission     : 4\2
+   permission     : 3\1
+   object-prop    : 2\90016\4\1\1\90015\2\4\
+}
+field {
+   id             : 379
+   name           : Record ID__c
+   datatype       : 4
+   fieldtype      : 1
+   create-mode    : 1
+   option         : 2
+   timestamp      : 1746865083
+   owner          : dice
+   last-changed   : dice
+   length-units   : 0
+   maxlength      : 128
+   clob-store-opt : 0
+   menu-style     : 2
+   qbe-match-op   : 3
+   fulltext-optns : 0
+   permission     : 4\1
+   permission     : 3\1
+   object-prop    : 2\90016\4\1\1\90015\2\4\
+}
+field {
+   id             : 536870913
+   name           : Script
+   datatype       : 4
+   fieldtype      : 1
+   create-mode    : 2
+   option         : 2
+   timestamp      : 1746865083
+   owner          : dice
+   last-changed   : dice
+   length-units   : 0
+   maxlength      : 0
+   clob-store-opt : 0
+   menu-style     : 2
+   qbe-match-op   : 1
+   fulltext-optns : 0
+ display-instance : 536870912\40\4\0\3\41\2\4499\24300\30708\26100\4\6\1\5\6\2\7\40\2147483648\14\40\1\20\4\6\Script\21\41\2\0\400\7874\1800\60\40\1\66\41\2\24184\0\26208\18&
+ display-instance : 00\143\40\4294967295\151\41\2\8436\0\23621\1800\170\40\0\231\6\0\288\6\0\289\4\4\0x00\290\4\4\0x00\310\6\0\5116\6\0\5233\4\0\\5234\4\4\left\5296\4\0\\530&
+ display-instance : 2\6\0\5314\6\0\5315\2\0\5345\4\0\\5347\4\0\\5352\2\0\5353\4\0\\5354\2\0\5368\4\0\\5369\4\0\\5373\6\0\5375\6\0\5378\4\0\\5380\4\0\\5382\6\0\5383\4\0\\5397&
+ display-instance : \4\0\\5403\6\0\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
+}
+end
+begin active link
+   name           : HELIX-PROXY:Demo:Btn FetchJS RunP
+   timestamp      : 1746865275
+   export-version : 12
+   owner          : dice
+   last-changed   : dice
+   actlink-order  : 0
+   wk-conn-type   : 1
+   schema-name    : HELIX-PROXY:Demo
+   actlink-mask   : 1
+   actlink-control: 536870922
+   enable         : 1
+   action {
+      set-field   : 0\536870923\102\1\@\18\HELIX-PROXY:Script\1\536870913\4\1\2\2\1\2\2\1\2\3\
+   }
+   object-prop    : 3\90016\4\1\1\90015\2\4\90002\4\11\HELIX-PROXY\
+   errhandler-opt : 0
+   errhandler-name: 
+end
+begin active link
+   name           : HELIX-PROXY:Demo:E Get Results SetF
+   timestamp      : 1746865166
+   export-version : 12
+   owner          : dice
+   last-changed   : dice
+   actlink-order  : 0
+   wk-conn-type   : 1
+   schema-name    : HELIX-PROXY:Demo
+   actlink-mask   : 1048576
+   enable         : 1
+   actlink-query  : 4\1\2\1\31\2\4\11\FetchResult\
+   action {
+      set-field   : 0\1225050901\101\1\41\
+   }
+   object-prop    : 3\90016\4\1\1\90015\2\4\90002\4\11\HELIX-PROXY\
+   errhandler-opt : 0
+   errhandler-name: 
+end
+begin schema data
+   name           : HELIX-PROXY:Script
+   data-mapping   : <?xml version="1.0" encoding="utf-8"?><arDocMapping xmlns="urn:remedy:schemas:ars" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0"> 
+   data-mapping   :    <element name="entryList">        <formMapping>            <form foreignKeyId="1" formName="HELIX-PROXY:Script" mapType="embedded" primaryKeyId="1"/
+   data-mapping   : >            <element name="entryItem">                <element dataType="string" name="f1_Request_ID__c">                    <fieldMapping arFieldId=
+   data-mapping   : "1"/>                </element>                <element dataType="string" name="f2_Submitter__c">                    <fieldMapping arFieldId="2"/>   
+   data-mapping   :              </element>                <element dataType="dateTime" name="f3_Create_Date__c">                    <fieldMapping arFieldId="3"/>        
+   data-mapping   :         </element>                <element dataType="string" name="f4_Assigned_To__c">                    <fieldMapping arFieldId="4"/>               
+   data-mapping   :  </element>                <element dataType="string" name="f5_Last_Modified_By__c">                    <fieldMapping arFieldId="5"/>                <
+   data-mapping   : /element>                <element dataType="dateTime" name="f6_Modified_Date__c">                    <fieldMapping arFieldId="6"/>                </el
+   data-mapping   : ement>                <element dataType="string" name="f7_Status__c">                    <fieldMapping arFieldId="7"/>                </element>     
+   data-mapping   :            <element dataType="string" name="f8_Short_Description__c">                    <fieldMapping arFieldId="8"/>                </element>      
+   data-mapping   :           <element dataType="string" name="f15_Status_History">                    <fieldMapping arFieldId="15"/>                </element>           
+   data-mapping   :      <element dataType="string" name="f16_Notifier_Listening__c">                    <fieldMapping arFieldId="16"/>                </element>         
+   data-mapping   :        <element dataType="string" name="f37__Record_ID__c">                    <fieldMapping arFieldId="379"/>                </element>              
+   data-mapping   :   <element dataType="string" name="f536870_13_Script">                    <fieldMapping arFieldId="536870913"/>                </element>            <
+   data-mapping   : /element>        </formMapping>    </element></arDocMapping>
+   data           : <?xml version="1.0" encoding="utf-8"?><entryList xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">    
+   data           : <entryItem>        <f1_Request_ID__c>000000000000001</f1_Request_ID__c>        <f2_Submitter__c>dice</f2_Submitter__c>        <f3_Create_Date__c>2025-
+   data           : 05-10T08:19:49+00:00</f3_Create_Date__c>        <f4_Assigned_To__c xsi:nil="true"/>        <f5_Last_Modified_By__c>dice</f5_Last_Modified_By__c>      
+   data           :   <f6_Modified_Date__c>2025-05-10T08:19:49+00:00</f6_Modified_Date__c>        <f7_Status__c>New</f7_Status__c>        <f8_Short_Description__c>x</f8_Sh
+   data           : ort_Description__c>        <f15_Status_History>2025-05-10T08:19:49+00:00dice</f15_Status_History>        <f16_Notifier_Listening__c>Not Listening
+   data           : </f16_Notifier_Listening__c>        <f37__Record_ID__c>AGGH00S1D6RMTASWB3TBSWB3TBBQER</f37__Record_ID__c>        <f536870_13_Script>&lt;body data-url="
+   data           : $1225050902$"&gt;    &lt;p&gt;&#55357;&#56580; Hämtar från URL satt i attribut...&lt;/p&gt;    &lt;script&gt;        async function fetchFromDynamic
+   data           : Attribute() {        const url = document.body.getAttribute('data-url');        if (!url || url.includes('$')) {            sendError('Ingen giltig UR
+   data           : L hittades i attributet.');            return;        }        console.log('&#55357;&#56599; Startar fetch:', url);        try {            const 
+   data           : response = await fetch(url, {            method: 'GET',            headers: {                'Content-Type': 'application/json'            },       
+   data           :      credentials: 'include'            });            console.log('&#55357;&#56549; Fetch klart, status:', response.status);            if (!respons
+   data           : e.ok) {            throw new Error(`HTTP error: ${response.status}`);            }            const data = await response.json();            console
+   data           : .log('&#55357;&#56550; Data mottagen:', data);            const payload = JSON.stringify(data);            if (parent?.DView?.SendSignalToParent) { 
+   data           :            console.log('&#55357;&#56548; Skickar AREvent FetchResult till formulär');            parent.DView.SendSignalToParent(undefined, 'FetchResul
+   data           : t', payload);            }        } catch (err) {            sendError(err.message);        }        }        window.addEventListener('DOMConten
+   data           : tLoaded', fetchFromDynamicAttribute);    &lt;/script&gt;  &lt;/body&gt;</f536870_13_Script>    </entryItem></entryList>
+end
+
+end
+
